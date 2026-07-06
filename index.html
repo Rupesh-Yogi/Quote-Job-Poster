@@ -1,24 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote & Task Poster</title>
-    <link rel="icon" href="Resources\favicon.ico">
+    <link rel="icon" href="Resources/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="randomQuote">
 
+    <header class="header">
+        <div class="logoImage">
+            <img src="Resources/header_logo.png" alt="Image of logo Like a message">
         </div>
 
-        <div class="liveSearch">
+        <div class="logoText">
+            <h1>Quote & Task Dashboard</h1>
+            <p>Stay inspired, Search smart, Get things done.</p>
+        </div>
+    </header>
 
+    <div class="cardContainer">
+
+        <div class="randomQuote-card">
+            <div class="quoteHeader">
+                <div class="quoteLogo">
+                    <i class="fa-solid fa-quote-left cardquote-logo"></i>
+                </div>
+
+                <div class="quoteTitle">
+                    <h2>1. Random Quote</h2>
+                    <p>Get inspired with a random quote.</p>
+                </div>
+            </div>
+
+            <div class="quoteBody">
+                <i class="fa-solid fa-quote-left quote-comma"></i>
+                <blockquote class="quoteText"></blockquote>
+                <p class="quoteAuthor"></p>
+            </div>
+
+            <div class="quoteFooter">
+                <div class="quotefirst-footer">
+
+                    <div class="quoteActions">
+                        <button class="refresh-btn">
+                            <i class="fa-solid fa-rotate"></i>Refresh Quote
+                        </button>
+                    </div>
+
+                    <div class="countDown">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <span class="countDown-text">Auto-refresh in <span>30</span>s</span>
+                    </div>
+                </div>
+
+                <div class="quotesecond-footer">
+
+                    <p class="quoteHint">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        New quote every 30s automatically.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="jobPoster">
-            
+
+        <div class="liveSearch-card">
+
+            <div class="liveSearch-header">
+                <div class="liveSearch-logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="liveSearch-text">
+
+                </div>
+            </div>
+
+            <div class="liveSearch-body">
+
+            </div>
+
+            <div class="liveSearch-footer">
+
+            </div>
         </div>
-    </div>   
 </body>
+
 </html>

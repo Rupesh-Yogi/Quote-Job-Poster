@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, monospace;
+}
+
+:root {
+    --bgcolor: #050c1a;
+    --cardbgcolor: #13182f;
+    --textColor: white;
+    --quotelogoColor: #8B5CF6;
+    --quote-body-color: linear-gradient(270deg, #1e2546, #232c52 );
+}
+
+body {
+    height: 90vh;
+    background-color: var(--bgcolor);
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    color: var(--textColor);
+    height: 80px;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+ /* Style for Cards */
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.randomQuote-card {
+    background-color: var(--cardbgcolor);
+    color: var(--textColor);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardquote-logo {
+    background-color: var(--quotelogoColor)  ;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.quoteHeader {
+    display: flex;
+    gap: 12px;
+}
+
+.quoteTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quoteTitle h2 {
+    color: var(--quotelogoColor);
+    font-size: 18px;
+}
+
+.quoteTitle p {
+    font-size: 15px;
+}
+
+.quoteBody {
+    background-color:var(--quote-body-color) ;
+}
+
+.quote-comma {
+    color: var(--quotelogoColor);
+}
+
+.quotefirst-footer {
+    display: flex;
+}
+
+.quoteActions button{
+    background-color: var(--quotelogoColor);  
+    padding: 8px;  
+    font-size: 15px;
+    border-radius: 8px;
+    color: var(--textColor);
+}
+
+/* .randomQuote {
+    grid-row: 1/2;
+    grid-column: 1/2;
+} */
+
+/* .randomQuote {
+    width: 30vw;
+    height: 70vh;
+    background-color: var(--cardbgcolor);
+}
+
+.liveSearch {
+    height: 300px;
+    width: 400px;
+    background-color: var(--cardbgcolor);
+}
+
+.jobPoster {
+    height: 300px;
+    width: 400px;
+    background-color: var(--cardbgcolor);
+} */
