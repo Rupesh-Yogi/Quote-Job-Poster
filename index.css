@@ -10,7 +10,10 @@
     --cardbgcolor: #13182f;
     --textColor: white;
     --quotelogoColor: #8B5CF6;
-    --quote-body-color: linear-gradient(270deg, #1e2546, #232c52 );
+    --livelogo-color: #3B82F6;
+    --searchinput-color: #161f31;
+    --posterlogo-color: #22C55E;
+    --quote-body-color: linear-gradient(270deg, #1e2546, #232c52);
 }
 
 body {
@@ -35,26 +38,41 @@ body {
     gap: 6px;
 }
 
- /* Style for Cards */
+/* Style for Cards */
+
+/* .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+} */
 
 .cardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* align-items: center;
-    justify-content: center; */
+    gap: 10px;
 }
 
-.randomQuote-card {
+/* Quote Card */
+
+.randomQuote-card,
+.liveSearch-card,
+.job-poster {
     background-color: var(--cardbgcolor);
     color: var(--textColor);
-    padding: 24px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
     gap: 20px;
 }
 
+
+/* Quotecard Header */
+
 .cardquote-logo {
-    background-color: var(--quotelogoColor)  ;
+    background-color: var(--quotelogoColor);
     padding: 15px;
     font-size: 20px;
     border-radius: 50%;
@@ -76,28 +94,206 @@ body {
     font-size: 18px;
 }
 
-.quoteTitle p {
+
+.secondText-line {
     font-size: 15px;
 }
 
+/* Quotecard Body */
+
 .quoteBody {
-    background-color:var(--quote-body-color) ;
+    background-color: var(--quote-body-color);
 }
 
 .quote-comma {
     color: var(--quotelogoColor);
 }
 
+/* Quotecard Footer */
+
 .quotefirst-footer {
     display: flex;
 }
 
-.quoteActions button{
-    background-color: var(--quotelogoColor);  
-    padding: 8px;  
+.quotefirst-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quoteActions button {
+    background-color: var(--quotelogoColor);
+    padding: 10px;
     font-size: 15px;
     border-radius: 8px;
     color: var(--textColor);
+    display: flex;
+    gap: 10px;
+}
+
+.countDown {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.countDown i {
+    color: var(--quotelogoColor);
+}
+
+.quoteFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* LiveSearch Card */
+
+
+.liveSearch-header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.liveSearch-logo i {
+    background-color: var(--livelogo-color);
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.liveSearch-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.liveSearch-text h2 {
+    color: var(--livelogo-color);
+    font-size: 18px;
+}
+
+
+.search-input {
+    position: relative;
+
+}
+
+.search-input input {
+    font-size: 15px;
+    padding: 12px;
+    background-color: var(--searchinput-color);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 28vw;
+    padding-left: 44px;
+    color: var(--textColor);
+}
+
+.search-input i {
+    position: absolute;
+    font-size: 18px;
+    left: 14px;
+    top: 15px;
+    opacity: 0.6;
+
+}
+
+/* For .job-poster Card */
+
+.jobposter-body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.jobposter-body h3 {
+    font-size: 14px;
+}
+
+.jobposter-header {
+    display: flex;
+    gap: 12px;
+}
+
+.jobposter-logo i {
+    background-color: var(--posterlogo-color);
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    border-radius: 50%;
+}
+
+.jobposter-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jobposter-text h2 {
+    font-size: 18px;
+    color: var(--posterlogo-color);
+}
+
+.task-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.task-title input {
+    font-size: 15px;
+    padding: 12px;
+    padding-left: 44px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--searchinput-color);
+    width: 28vw;
+
+}
+
+.task-title i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+
+.body-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.body-description textarea {
+    padding: 13px;
+    border-radius: 12px;
+    background-color: var(--searchinput-color);
+    height: 20vh;
+    font-size: 14px;
+    padding-left: 44px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.body-description i {
+    position: absolute;
+    left: 16px;
+    top: 38px;
+    opacity: 0.6;
+}
+
+.post-task {
+    
 }
 
 /* .randomQuote {
