@@ -13,13 +13,13 @@
     --livelogo-color: #3B82F6;
     --searchinput-color: #161f31;
     --posterlogo-color: #22C55E;
+    --jobposter-footer-color: #1c2926;
     --quote-body-color: linear-gradient(270deg, #1e2546, #232c52);
 }
 
 body {
     height: 90vh;
-    background-color: var(--bgcolor);
-    padding: 30px;
+    background-color: var(--bgcolor);    
 }
 
 .header {
@@ -27,8 +27,10 @@ body {
     align-items: center;
     color: var(--textColor);
     height: 80px;
-    padding: 20px;
+    padding: 30px;
+    margin-top: 20px;
     gap: 20px;
+    /* background-color: red; */
 }
 
 
@@ -50,7 +52,8 @@ body {
 .cardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+    padding: 30px;
 }
 
 /* Quote Card */
@@ -63,9 +66,8 @@ body {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
     gap: 20px;
+    border-radius: 12px;
 }
 
 
@@ -152,9 +154,9 @@ body {
 
 
 .liveSearch-header {
-    justify-content: center;
+    /* justify-content: center; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 12px;
 }
 
@@ -292,9 +294,59 @@ body {
     opacity: 0.6;
 }
 
-.post-task {
-    
+.post-task-button {
+    position: relative;
 }
+
+.post-task-button i {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+#post-task {
+    background-color: var(--posterlogo-color);
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--textColor);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    width: 28vw;
+}
+
+.job-poster-footer {
+    background-color: var(--jobposter-footer-color);
+    padding: 30px;
+    width: 28vw;
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.poster-footer-icon i {
+    font-size: 50px;
+    border-radius: 50%;
+    border: 3px dashed var(--posterlogo-color);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.poster-footer-text h3 {
+    font-size: 16px;
+}
+
 
 /* .randomQuote {
     grid-row: 1/2;
