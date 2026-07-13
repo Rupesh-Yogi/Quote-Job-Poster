@@ -14,11 +14,12 @@
     --searchinput-color: #161f31;
     --posterlogo-color: #22C55E;
     --jobposter-footer-color: #1c2926;
+    --heart-color:red;
     --quote-body-color: linear-gradient(270deg, #1e2546, #232c52);
 }
 
 body {
-    height: 90vh;
+    /* height: 90vh; */
     background-color: var(--bgcolor);    
 }
 
@@ -54,6 +55,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 30px;
+    padding-bottom: 0;
 }
 
 /* Quote Card */
@@ -113,9 +115,6 @@ body {
 
 /* Quotecard Footer */
 
-.quotefirst-footer {
-    display: flex;
-}
 
 .quotefirst-footer {
     display: flex;
@@ -348,25 +347,13 @@ body {
 }
 
 
-/* .randomQuote {
-    grid-row: 1/2;
-    grid-column: 1/2;
-} */
-
-/* .randomQuote {
-    width: 30vw;
-    height: 70vh;
-    background-color: var(--cardbgcolor);
+.footer-text {
+    color: var(--textColor);
+    text-align: center;
+    padding: 20px;
 }
 
-.liveSearch {
-    height: 300px;
-    width: 400px;
-    background-color: var(--cardbgcolor);
+.footer-text i {
+    color: var(--heart-color) ;
 }
 
-.jobPoster {
-    height: 300px;
-    width: 400px;
-    background-color: var(--cardbgcolor);
-} */
