@@ -14,13 +14,13 @@
     --searchinput-color: #161f31;
     --posterlogo-color: #22C55E;
     --jobposter-footer-color: #1c2926;
-    --heart-color:red;
-    --quote-body-color: linear-gradient(270deg, #1e2546, #232c52);
+    --heart-color: red;
+    --quote-body-color: linear-gradient(135deg, #241F4E, #131830);
 }
 
 body {
     /* height: 90vh; */
-    background-color: var(--bgcolor);    
+    background-color: var(--bgcolor);
 }
 
 .header {
@@ -107,10 +107,35 @@ body {
 
 .quoteBody {
     background-color: var(--quote-body-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.quoteText {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.quoteAuthor {
+    color: var(--quotelogoColor);
+
 }
 
 .quote-comma {
     color: var(--quotelogoColor);
+    font-size: 30px;
+
 }
 
 /* Quotecard Footer */
@@ -341,7 +366,7 @@ body {
     flex-direction: column;
     gap: 8px;
 }
- 
+
 .poster-footer-text h3 {
     font-size: 16px;
 }
@@ -354,6 +379,5 @@ body {
 }
 
 .footer-text i {
-    color: var(--heart-color) ;
+    color: var(--heart-color);
 }
-
