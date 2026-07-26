@@ -15,6 +15,7 @@
     --posterlogo-color: #22C55E;
     --jobposter-footer-color: #1c2926;
     --heart-color: red;
+    --searching-background: rgba(59, 130, 246, 0.1);
     --quote-body-color: linear-gradient(135deg, #241F4E, #131830);
 }
 
@@ -155,6 +156,7 @@ body {
     color: var(--textColor);
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 
 .countDown {
@@ -165,6 +167,17 @@ body {
 
 .countDown i {
     color: var(--quotelogoColor);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .quoteFooter {
@@ -173,6 +186,9 @@ body {
     gap: 30px;
 }
 
+.quoteHint i {
+    color: var(--quotelogoColor);
+}
 
 /* LiveSearch Card */
 
@@ -226,8 +242,47 @@ body {
     left: 14px;
     top: 15px;
     opacity: 0.6;
-
 }
+
+.searchLoading {
+    background-color: var(--searching-background);
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1) ;
+    border-radius: 8px;
+    margin: 8px;
+    width: 28vw;
+    
+}
+
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerForResult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--searchinput-color);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.containerForResult img {
+    height: 38px;
+    width: 50px;
+    border-radius: 8px;
+}
+
+.containerForResult p {
+    font-weight: bold;
+}
+
 
 /* For .job-poster Card */
 
