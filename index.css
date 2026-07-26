@@ -249,11 +249,27 @@ body {
     padding: 10px;
     border: 2px solid rgba(255, 255, 255, 0.1) ;
     border-radius: 8px;
-    margin: 8px;
+    margin-top: 8px;
     width: 28vw;
-    
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--livelogo-color);
 }
 
+.searchLoading i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframe spin {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to{
+        transform: rotate(360deg)
+    }
+}
 
 .countries {
     display: flex;

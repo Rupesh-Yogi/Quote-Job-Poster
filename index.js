@@ -71,3 +71,9 @@ searchInput.addEventListener("input", () => {
       });
   }, 800);
 });
+
+
+// For Search spinner 
+
+const searchSpin = document.querySelector(".searchLoading");
+
