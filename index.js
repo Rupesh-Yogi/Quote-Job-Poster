@@ -40,17 +40,28 @@ setInterval(() => {
 const searchInput = document.querySelector(".search-input input");
 const countriesContainer = document.querySelector(".countries");
 
+const searchLoading = document.querySelector(".searchLoading");
+
 let debounceTimer;
 
 searchInput.addEventListener("input", () => {
   const inputValue = searchInput.value;
-
+  searchLoading.style.display = "flex";
+  
   clearTimeout(debounceTimer);
-
+  
+  if (inputValue.trim() == "") {
+    countriesContainer.innerHTML = "";
+    searchLoading.style.display = "none";
+    return;
+  }
+  
   debounceTimer = setTimeout(() => {
     fetch(`https://countries.dev/name/${inputValue}`)
       .then((res) => res.json())
       .then((data) => {
+        searchLoading.style.display = "none";
+
         countriesContainer.innerHTML = "";
         data.forEach((element) => {
           const containerForResult = document.createElement("div");
@@ -71,9 +82,3 @@ searchInput.addEventListener("input", () => {
       });
   }, 800);
 });
-
-
-// For Search spinner 
-
-const searchSpin = document.querySelector(".searchLoading");
-
