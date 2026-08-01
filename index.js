@@ -47,15 +47,15 @@ let debounceTimer;
 searchInput.addEventListener("input", () => {
   const inputValue = searchInput.value;
   searchLoading.style.display = "flex";
-  
+
   clearTimeout(debounceTimer);
-  
+
   if (inputValue.trim() == "") {
     countriesContainer.innerHTML = "";
     searchLoading.style.display = "none";
     return;
   }
-  
+
   debounceTimer = setTimeout(() => {
     fetch(`https://countries.dev/name/${inputValue}`)
       .then((res) => res.json())
@@ -81,4 +81,36 @@ searchInput.addEventListener("input", () => {
         });
       });
   }, 800);
+});
+
+// For Job Poster Card
+
+const postButton = document.querySelector("#post-task");
+const taskTitleInput = document.querySelector(".task-title input");
+const textArea = document.querySelector(".body-description textarea");
+const emptyState = document.querySelector(".noJObState");
+
+postButton.addEventListener("click", () => {
+
+  emptyState.style.display = "none";
+
+  const textAreaValue = textArea.value;
+  const titleInputValue = taskTitleInput.value;
+
+  const jobPostArea = document.querySelector(".postedJobsList");
+
+  const jobListWrapper = document.createElement("div");
+  jobListWrapper.classList.add("jobListsWrapper");
+
+  const titleElement = document.createElement("h3");
+  titleElement.textContent = titleInputValue;
+
+  const descriptionElement = document.createElement("p");
+  descriptionElement.textContent = textAreaValue;
+
+  jobListWrapper.appendChild(titleElement);
+  jobListWrapper.appendChild(descriptionElement);
+
+  jobPostArea.appendChild(jobListWrapper);
+
 });

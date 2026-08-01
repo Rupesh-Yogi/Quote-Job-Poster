@@ -247,7 +247,7 @@ body {
 .searchLoading {
     background-color: var(--searching-background);
     padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.1) ;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin-top: 8px;
     width: 28vw;
@@ -266,7 +266,7 @@ body {
         transform: rotate(0deg)
     }
 
-    to{
+    to {
         transform: rotate(360deg)
     }
 }
@@ -300,7 +300,7 @@ body {
 }
 
 
-/* For .job-poster Card */
+/* For Job Poster Card */
 
 .jobposter-body {
     display: flex;
@@ -353,7 +353,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.1);
     background-color: var(--searchinput-color);
     width: 28vw;
-
+    color: var(--textColor);
 }
 
 .task-title i {
@@ -380,6 +380,7 @@ body {
     font-size: 14px;
     padding-left: 44px;
     border: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--textColor);
 }
 
 .body-description i {
@@ -408,18 +409,19 @@ body {
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     width: 28vw;
+    cursor: pointer;
 }
 
-.job-poster-footer {
+.noJObState {
     background-color: var(--jobposter-footer-color);
     padding: 30px;
     width: 28vw;
     border-radius: 12px;
     display: flex;
     gap: 12px;
-    /* justify-content: center; */
     align-items: center;
 }
+
 
 .poster-footer-icon i {
     font-size: 50px;
@@ -451,4 +453,17 @@ body {
 
 .footer-text i {
     color: var(--heart-color);
+}
+
+
+/* Hover effect  for all cards*/
+
+.randomQuote-card, .liveSearch-card, .job-poster {
+    transition: transform 0.4s ease;
+}
+
+
+.randomQuote-card:hover, .liveSearch-card:hover, .job-poster:hover {
+    transform: translate(-3px, -3px);
+    border: 2px solid rgba(139, 92, 246, 1);    
 }

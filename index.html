@@ -1,144 +1,146 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quote & Task Poster</title>
-        <link rel="icon" href="Resources/favicon.ico">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <script src="index.js" defer></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote & Task Poster</title>
+    <link rel="icon" href="Resources/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="index.js" defer></script>
+</head>
 
-    <body>
+<body>
 
-        <header class="header">
-            <div class="logoImage">
-                <img src="Resources/header_logo.png" alt="Image of logo Like a message">
-            </div>
+    <header class="header">
+        <div class="logoImage">
+            <img src="Resources/header_logo.png" alt="Image of logo Like a message">
+        </div>
 
-            <div class="logoText">
-                <h1>Quote & Task Dashboard</h1>
-                <p>Stay inspired, Search smart, Get things done.</p>
-            </div>
-        </header>
+        <div class="logoText">
+            <h1>Quote & Task Dashboard</h1>
+            <p>Stay inspired, Search smart, Get things done.</p>
+        </div>
+    </header>
 
-        <div class="cardContainer">
+    <div class="cardContainer">
 
-            <div class="randomQuote-card">
-                <div class="quoteHeader">
-                    <div class="quoteLogo">
-                        <i class="fa-solid fa-quote-left cardquote-logo"></i>
-                    </div>
-
-                    <div class="quoteTitle">
-                        <h2>1. Random Quote</h2>
-                        <p class="secondText-line">Get inspired with a random quote.</p>
-                    </div>
+        <div class="randomQuote-card">
+            <div class="quoteHeader">
+                <div class="quoteLogo">
+                    <i class="fa-solid fa-quote-left cardquote-logo"></i>
                 </div>
 
-                <div class="quoteBody">
-                    <i class="fa-solid fa-quote-left quote-comma"></i>
-                    <div class="quote-content">
-                        <blockquote class="quoteText"></blockquote>
-                        <p class="quoteAuthor"></p>
-                    </div>
-                </div>
-
-                <div class="quoteFooter">
-                    <div class="quotefirst-footer">
-
-                        <div class="quoteActions">
-                            <button class="refresh-btn">
-                                <i class="fa-solid fa-rotate"></i>Refresh Quote
-                            </button>
-                        </div>
-
-                        <div class="countDown">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <span class="countDown-text">Auto-refresh in <span id="countDown">30</span>s</span>
-                        </div>
-                    </div>
-
-                    <div class="quotesecond-footer">
-
-                        <p class="quoteHint">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            New quote every 30s automatically.
-                        </p>
-                    </div>
+                <div class="quoteTitle">
+                    <h2>1. Random Quote</h2>
+                    <p class="secondText-line">Get inspired with a random quote.</p>
                 </div>
             </div>
 
-
-            <div class="liveSearch-card">
-
-                <div class="liveSearch-header">
-                    <div class="liveSearch-logo">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-
-                    <div class="liveSearch-text">
-                        <h2>2. Live Search</h2>
-                        <p class="secondText-line">Search for countries in real-time.</p>
-                    </div>
-                </div>
-
-                <div class="liveSearch-body">
-                    <div class="search-input">
-                        <input type="text" placeholder="Search countries">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-
-                    <div class="searchLoading">
-                        <i class="fa-solid fa-spinner"></i>
-                        Searching...</div>
-
-                    <div class="countries">
-                        
-                    </div>
-
-                </div>
-
-                <div class="liveSearch-footer">
-
+            <div class="quoteBody">
+                <i class="fa-solid fa-quote-left quote-comma"></i>
+                <div class="quote-content">
+                    <blockquote class="quoteText"></blockquote>
+                    <p class="quoteAuthor"></p>
                 </div>
             </div>
 
+            <div class="quoteFooter">
+                <div class="quotefirst-footer">
 
-            <div class="job-poster">
-                <div class="jobposter-header">
-                    <div class="jobposter-logo">
-                        <i class="fa-solid fa-clipboard"></i>
+                    <div class="quoteActions">
+                        <button class="refresh-btn">
+                            <i class="fa-solid fa-rotate"></i>Refresh Quote
+                        </button>
                     </div>
 
-                    <div class="jobposter-text">
-                        <h2>3. Task Poster</h2>
-                        <p class="secondText-line">Create a new task for your list.</p>
-                    </div>
-                </div>
-
-                <div class="jobposter-body">
-                    <div class="task-title">
-                        <h3>Task Title</h3>
-                        <input type="text" placeholder="Enter task title....">
-                        <i class="fa-solid fa-file-lines"></i>
-                    </div>
-
-                    <div class="body-description">
-                        <h3>Description</h3>
-                        <textarea placeholder="Enter task Description"></textarea>
-                        <i class="fa-solid fa-align-left"></i>
-                    </div>
-
-                    <div class="post-task-button">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <button id="post-task">Post Task</button>
+                    <div class="countDown">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <span class="countDown-text">Auto-refresh in <span id="countDown">30</span>s</span>
                     </div>
                 </div>
 
-                <div class="job-poster-footer">
+                <div class="quotesecond-footer">
+
+                    <p class="quoteHint">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        New quote every 30s automatically.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="liveSearch-card">
+
+            <div class="liveSearch-header">
+                <div class="liveSearch-logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="liveSearch-text">
+                    <h2>2. Live Search</h2>
+                    <p class="secondText-line">Search for countries in real-time.</p>
+                </div>
+            </div>
+
+            <div class="liveSearch-body">
+                <div class="search-input">
+                    <input type="text" placeholder="Search countries">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="searchLoading">
+                    <i class="fa-solid fa-spinner"></i>
+                    Searching...
+                </div>
+
+                <div class="countries">
+
+                </div>
+
+            </div>
+
+            <div class="liveSearch-footer">
+
+            </div>
+        </div>
+
+
+        <div class="job-poster">
+            <div class="jobposter-header">
+                <div class="jobposter-logo">
+                    <i class="fa-solid fa-clipboard"></i>
+                </div>
+
+                <div class="jobposter-text">
+                    <h2>3. Task Poster</h2>
+                    <p class="secondText-line">Create a new task for your list.</p>
+                </div>
+            </div>
+
+            <div class="jobposter-body">
+                <div class="task-title">
+                    <h3>Task Title</h3>
+                    <input type="text" placeholder="Enter task title....">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div class="body-description">
+                    <h3>Description</h3>
+                    <textarea placeholder="Enter task Description"></textarea>
+                    <i class="fa-solid fa-align-left"></i>
+                </div>
+
+                <div class="post-task-button">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <button id="post-task">Post Task</button>
+                </div>
+            </div>
+
+            <div class="job-poster-footer">
+                <div class="noJObState">
                     <div class="poster-footer-icon">
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
@@ -149,14 +151,18 @@
                     </div>
                 </div>
 
+                <div class="postedJobsList"></div>
 
             </div>
+
+
         </div>
+    </div>
 
 
-        <div class="footer">
-            <p class="footer-text"> Made with <i class="fa-solid fa-heart"></i> using Vanilla Javascript.</p>
-        </div>
-    </body>
+    <div class="footer">
+        <p class="footer-text"> Made with <i class="fa-solid fa-heart"></i> using Vanilla Javascript.</p>
+    </div>
+</body>
 
-    </html>
+</html>
