@@ -381,6 +381,10 @@ body {
     opacity: 0.6;
 }
 
+#title-element, #description-element {
+    color: red;
+}
+
 .post-task-button {
     position: relative;
 }
@@ -435,6 +439,8 @@ body {
     font-size: 16px;
 }
 
+
+/* For Footer */
 
 .footer-text {
     color: var(--textColor);
