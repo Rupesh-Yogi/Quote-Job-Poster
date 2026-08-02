@@ -91,26 +91,88 @@ const textArea = document.querySelector(".body-description textarea");
 const emptyState = document.querySelector(".noJObState");
 
 postButton.addEventListener("click", () => {
-
-  emptyState.style.display = "none";
-
   const textAreaValue = textArea.value;
   const titleInputValue = taskTitleInput.value;
 
-  const jobPostArea = document.querySelector(".postedJobsList");
+  const titleErrorMessage = document.querySelector("#title-element");
+  const descriptionErrorMessage = document.querySelector("#description-element");
 
-  const jobListWrapper = document.createElement("div");
-  jobListWrapper.classList.add("jobListsWrapper");
+  if (titleInputValue == "") {
+    titleErrorMessage.textContent = "Enter the title";
+  } else {
+    titleErrorMessage.textContent = "";
+  }
 
-  const titleElement = document.createElement("h3");
+  if (textAreaValue == "") {
+    descriptionErrorMessage.textContent = "Enter the text for teh description";
+  } else {
+    descriptionErrorMessage.textContent = "";
+  }
+
+  if(textAreaValue != "" && titleInputValue != ""){
+
+    emptyState.style.display = "none";
+        
+    const jobPostArea = document.querySelector(".postedJobsList");
+    
+    const jobListWrapper = document.createElement("div");
+    jobListWrapper.classList.add("jobListsWrapper");
+    
+    const titleElement = document.createElement("h3");
   titleElement.textContent = titleInputValue;
 
   const descriptionElement = document.createElement("p");
   descriptionElement.textContent = textAreaValue;
-
+  
   jobListWrapper.appendChild(titleElement);
   jobListWrapper.appendChild(descriptionElement);
-
+  
   jobPostArea.appendChild(jobListWrapper);
-
+}
 });
+
+// ***************************************************************
+
+// const postButton = document.querySelector("#post-task");
+// const taskTitleInput = document.querySelector(".task-title input");
+// const textArea = document.querySelector(".body-description textarea");
+// const emptyState = document.querySelector(".noJObState");
+
+// const inputText = document.querySelectorAll(".inputText");
+
+// postButton.addEventListener("click", () => {
+  //   emptyState.style.display = "none";
+  
+  //   const textAreaValue = textArea.value;
+  //   const titleInputValue = taskTitleInput.value;
+  
+  //   inputText.forEach((element) => {
+//     const errorMesssage = element.getAttribute("errorMessage");
+//     const errorId = element.getAttribute("errorId");
+//     const errorElement = document.querySelector(`#${errorId}`);
+
+//     const inputText = document.querySelectorAll(".inputText");
+
+//     if (element.value == "") {
+//       errorElement.textContent = errorMesssage;
+//     } else {
+//       errorElement.textContent = "";
+
+//       const jobPostArea = document.querySelector(".postedJobsList");
+
+//       const jobListWrapper = document.createElement("div");
+//       jobListWrapper.classList.add("jobListsWrapper");
+
+//       const titleElement = document.createElement("h3");
+//       titleElement.textContent = titleInputValue;
+
+//       const descriptionElement = document.createElement("p");
+//       descriptionElement.textContent = textAreaValue;
+
+//       jobListWrapper.appendChild(titleElement);
+//       jobListWrapper.appendChild(descriptionElement);
+
+//       jobPostArea.appendChild(jobListWrapper);
+//     }
+//   });
+// });
